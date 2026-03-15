@@ -1,3 +1,5 @@
+# Used to set the project folder to local package
+
 from setuptools import setup, find_packages
 
 setup(
