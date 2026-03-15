@@ -22,4 +22,5 @@ fastapi
 uvicorn
 jinja2
 python-multipart
+python-dotenv
 -e . # along with setup.py or pyproject.toml to install your project to python environment
