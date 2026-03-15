@@ -5,7 +5,7 @@
 - Git: https://git-scm.com/install/
 - Flowchart: https://whimsical.com/
 - MLOPS tools: https://www.evidentlyai.com/
-- MongoDB: 
+- MongoDB: https://account.mongodb.com/account/login
 
 ## Git Commands
 ```bash
