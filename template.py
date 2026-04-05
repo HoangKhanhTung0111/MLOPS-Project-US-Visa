@@ -6,8 +6,8 @@ project_name = "us_visa"
 # f-string: insert value of the variable in the {}
 
 list_of_files = [
-    f"{project_name}/__init__.py" # Constructor file, it define that this folder is local package
-    f"{project_name}/components" # Main step
+    f"{project_name}/__init__.py", # Constructor file, it define that this folder is local package
+    f"{project_name}/components/__init__.py", # Main step
     f"{project_name}/components/data_ingestion.py",  
     f"{project_name}/components/data_validation.py",
     f"{project_name}/components/data_transformation.py",
@@ -34,6 +34,8 @@ list_of_files = [
     "setup.py",
     "config/model.yaml",
     "config/schema.yaml",
+    "flowcharts/.gitkeep",
+    "logs/.gitkeep",
 ]
 
 for filepath in list_of_files:
@@ -41,9 +43,8 @@ for filepath in list_of_files:
     filedir, filename = os.path.split(filepath) # Split the path into the folder and file path
     if (filedir != ""):
         os.makedirs(filedir, exist_ok=True) # Create new folder, exist_ok=True if folder is exist then pass without Error
-    if (not os.path.exists(filepath) or (os.path.getsize(filepath))): # If file is not exist or file is empty
+    if (not os.path.exists(filepath) or (os.path.getsize(filepath)) == 0): # If file is not exist or file is empty
         with open(filepath, "w") as f: # Open file in "write" mode
             pass # Do nothing, just open and close to create file
     else:
         print(f"file is already present at: {filepath}")
-
