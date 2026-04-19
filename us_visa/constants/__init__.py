@@ -8,16 +8,21 @@ from dotenv import load_dotenv
 
 load_dotenv() # Load environment variables from .env file
 
+# Mongodb related constants
 DATABASE_NAME = "US_VISA"
-
 COLLECTION_NAME = "visa_data"
-
 MONGODB_URL_KEY = os.getenv("MONGODB_URL")
 
+# Folder and file name related constants
 PIPELINE_NAME: str = "usvisa" # Type hint: explicitly define the pipeline name as a constant
 ARTIFACT_DIR: str = "artifact"
 
+TRAIN_FILE_NAME: str = "train.csv"
+TEST_FILE_NAME: str = "test.csv"
+
 MODEL_FILE_NAME = "model.pkl"
+FILE_NAME: str = "usvisa.csv"
+
 
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
