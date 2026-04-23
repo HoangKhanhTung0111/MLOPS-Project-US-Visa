@@ -3,15 +3,12 @@
 # và các thông tin cần thiết khác (như tên database, collection, url của mongodb, aws,...)
 
 import os
-from datatime import datetime
-from dotenv import load_dotenv
-
-load_dotenv() # Load environment variables from .env file
+from datatime import date
 
 # Mongodb related constants
 DATABASE_NAME = "US_VISA"
 COLLECTION_NAME = "visa_data"
-MONGODB_URL_KEY = os.getenv("MONGODB_URL")
+MONGODB_URL_KEY = "MONGODB_URL"
 
 # Folder and file name related constants
 PIPELINE_NAME: str = "usvisa" # Type hint: explicitly define the pipeline name as a constant
