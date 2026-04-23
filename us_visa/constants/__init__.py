@@ -2,6 +2,9 @@
 # File này chứa các hằng số, dùng để cất output của pipline vào folder artifact (trong lúc train hoặc predict) 
 # và các thông tin cần thiết khác (như tên database, collection, url của mongodb, aws,...)
 
+# Không nên mã hóa luôn giá trị của MongoDB URL vào đây, mà file này chỉ để chứa tên hằng
+# còn việc lấy giá trị của Key sẽ được thực hiện ở trong các class
+
 import os
 from datatime import date
 
