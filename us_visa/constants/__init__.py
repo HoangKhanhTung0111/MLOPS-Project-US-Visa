@@ -6,7 +6,7 @@
 # còn việc lấy giá trị của Key sẽ được thực hiện ở trong các class
 
 import os
-from datatime import date
+from datetime import date
 
 # Mongodb related constants
 DATABASE_NAME = "US_VISA"

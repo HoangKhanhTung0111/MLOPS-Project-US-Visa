@@ -7,7 +7,7 @@ from us_visa.entity.config_entity import DataIngestionConfig
 from us_visa.entity.artifact_entity import DataIngestionArtifact
 
 class TrainingPipeline:
-    def __int__(self): # Không cần truyền tham số vào vì đã có config sẵn trong class DataIngestionConfig
+    def __init__(self): # Không cần truyền tham số vào vì đã có config sẵn trong class DataIngestionConfig
         self.data_ingestion_config = DataIngestionConfig() # Create an instance of the DataIngestionConfig class to get the configuration for data ingestion
         
     def start_data_ingestion(self) -> DataIngestionArtifact:
