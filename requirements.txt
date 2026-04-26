@@ -1,10 +1,10 @@
 ipykernel
-pandas
-numpy
+numpy<2
+pandas<2
 matplotlib
 plotly
 seaborn
-scipy
+scipy<1.11
 scikit-learn
 imblearn
 xgboost
