@@ -17,6 +17,29 @@ git commit -m "Update"
 git push origin main
 ```
 
+## Library conflict solution 
+1. Use install (Conda automatic remove and reinstall)
+```bash
+conda install ten_thu_vien=phien_ban_moi --freeze-installed
+# VD: conda install pandas=1.5.3
+```
+2. Use update
+```bash
+conda update ten_thu_vien
+```
+3. Use remove
+```bash
+conda remove ten_thu_vien
+conda install ten_thu_vien=phien_ban_dung
+```
+4. Remove conda
+```bash
+conda deactivate
+conda remove -n myenv --all
+# And then run like "How to run" section
+```
+
+
 ## How to run?
 ```bash
 conda create -n visa python=3.10 -y
