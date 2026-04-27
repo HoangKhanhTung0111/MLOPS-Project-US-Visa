@@ -18,7 +18,7 @@ git push origin main
 ```
 
 ## Library conflict solution 
-1. Use install (Conda automatic remove and reinstall)
+1. Use install (Conda automatic remove and reinstall), but sometime conda will not remove the old one so it recommended to use "conda remove" instead
 ```bash
 conda install ten_thu_vien=phien_ban_moi --freeze-installed
 # VD: conda install pandas=1.5.3
@@ -53,7 +53,7 @@ conda activate visa
 pip install -r requirements.txt
 ```
 
-## Workflow (order to update files):
+## Workflow (order to update files, all the step like: data ingestion, data validation,... will have the same order of update file):
 
 1. constants
 2. entity
