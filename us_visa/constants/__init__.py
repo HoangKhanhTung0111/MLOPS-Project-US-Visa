@@ -23,6 +23,13 @@ TEST_FILE_NAME: str = "test.csv"
 MODEL_FILE_NAME = "model.pkl"
 FILE_NAME: str = "usvisa.csv"
 
+TARGET_COLUMN = "case_status"
+CURRENT_YEAR = date.today().year
+# file .pkl is used to freeze an object in python, 
+# in this case, we will freeze the preprocessing object (contains steps to preprocess data-data transformation),
+# like scaling, encoding,..., and then we can load it later to preprocess the data in the same way as we did in training step 
+PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
+SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
