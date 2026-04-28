@@ -1,9 +1,13 @@
+"""
 # Khác với file template.py (tạo ra cấu trúc thư mục và file ở thời điểm khởi tạo project),
 # File này chứa các hằng số, dùng để cất output của pipline vào folder artifact (trong lúc train hoặc predict) 
 # và các thông tin cần thiết khác (như tên database, collection, url của mongodb, aws,...)
 
-# Không nên mã hóa luôn giá trị của MongoDB URL vào đây, mà file này chỉ để chứa tên hằng
-# còn việc lấy giá trị của Key sẽ được thực hiện ở trong các class
+Không nên mã hóa luôn giá trị của MongoDB URL vào đây, mà file này chỉ để chứa tên hằng
+còn việc lấy giá trị của Key sẽ được thực hiện ở trong các class
+
+Tương tự với việc path sẽ không được tạo ở đây, mà sẽ được định nghĩa trong config_entity.py, còn việc tạo path sẽ được thực hiện ở trong các class config_entity.py
+"""
 
 import os
 from datetime import date
@@ -41,8 +45,16 @@ DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.2
 
 """
-Data Validation realted contant start with DATA_VALIDATION VAR NAME
+Data Validation realted contant start with DATA_VALIDATION VAR NAME (in the artifact folder)
 """
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
 DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml"
+
+
+"""
+Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME (in the artifact folder)
+"""
+DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed" # transformed data (train.np, test.np)
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object" # preprocessing object (preprocessing.pkl) will be stored in this folder
