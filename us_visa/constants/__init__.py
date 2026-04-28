@@ -28,7 +28,7 @@ CURRENT_YEAR = date.today().year
 # file .pkl is used to freeze an object in python, 
 # in this case, we will freeze the preprocessing object (contains steps to preprocess data-data transformation),
 # like scaling, encoding,..., and then we can load it later to preprocess the data in the same way as we did in training step 
-PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
+PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl" # use in the data transformation step
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 """
