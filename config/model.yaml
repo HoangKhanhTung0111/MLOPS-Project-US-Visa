@@ -1,5 +1,5 @@
 # Configuration file for model training
-# Can change the model and its parameters in this file, no need to change the code
+# Can change the model and its parameters in this file, no need to change the code (with neuro-mf package)
 
 grid_search:
   class: GridSearchCV
