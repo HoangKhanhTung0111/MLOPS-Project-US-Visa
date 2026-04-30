@@ -7,13 +7,13 @@ import sys
 from pandas import DataFrame
 from sklearn.pipeline import Pipeline
 
-from us_visa.exception import USVisaException
+from us_visa.exception import USvisaException
 from us_visa.logger import logging
 
 class TargetValueMapping:
     # Chiều thuận từ chữ sang số (khi training)
     def __init__(self):
-        self.Certificate: int = 0
+        self.Certified: int = 0
         self.Denied: int = 1
     
     # Create a method to return a dict to map the target variable values: {"Certificate": 0, "Denied": 1}
