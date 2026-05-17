@@ -35,6 +35,12 @@ CURRENT_YEAR = date.today().year
 PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl" # use in the data transformation step
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
+
+AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
+AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
+REGION_NAME = "us-east-1"
+
+
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
 """
@@ -67,3 +73,10 @@ MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
 MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6 # Sử dụng cho quá trình model push, nếu model mới có score trên 0.6 thì mới được push lên production, còn ko thì sử dụng model cũ trên server (s3 bucket)
 MODEL_TRAINER_MODEL_CONFIG_FILE_PATH: str = os.path.join("config", "model.yaml")
+
+"""
+MODEL EVALUATION related constant
+"""
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_BUCKET_NAME = "usvisa-model2026"
+MODEL_PUSHER_S3_KEY = "model-registry"
